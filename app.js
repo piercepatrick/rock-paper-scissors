@@ -48,23 +48,29 @@ function game()
     else console.log('Your game ended with tie!');
 }
 
+const results = document.querySelector('#results');
+let headingVar = document.createElement('H5');
+headingVar.id = 'headingText';
+results.appendChild(headingVar);
+
 const rockbtn = document.getElementsByClassName('rock')[0];
 rockbtn.addEventListener( 'click', () => {
+
     playerSelection = 'Rock';
     computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection));
+    document.getElementById('headingText').innerHTML = playRound(playerSelection, computerSelection);
 });
 
-const paperbtn = document.getElementsByClassName('paper');
+const paperbtn = document.getElementsByClassName('paper')[0];
 paperbtn.addEventListener( 'click', () => {
     playerSelection = 'paper';
     computerSelection = computerPlay();
-    playRound(playerSelection, computerSelection);
+    document.getElementById('headingText').innerHTML = playRound(playerSelection, computerSelection)
 });
 
-const scissorsbtn = document.getElementsByClassName('scissors');
+const scissorsbtn = document.getElementsByClassName('scissors')[0];
 scissorsbtn.addEventListener( 'click', () => {
     playerSelection = 'scissors';
     computerSelection = computerPlay();
-    playRound(playerSelection, computerSelection);
+    document.getElementById('headingText').innerHTML = playRound(playerSelection, computerSelection)
 });
