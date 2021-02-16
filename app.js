@@ -9,6 +9,7 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection)
 {
+    if (playerWins >= 5 || computerWins >= 5) return '';
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
     if (playerSelection == computerSelection) return 'Tie!';
@@ -58,17 +59,17 @@ function game()
 }
 
 function displayRunningScore(playerWins, computerWins) {
-    if (playerWins == 5)
+    if (playerWins >= 5)
     {
     document.getElementById('runningScoreText').innerHTML = 'You win the game! Press the play again button to play again.';
     }
-    if (computerWins == 5)
+    if (computerWins >= 5)
     {
     document.getElementById('runningScoreText').innerHTML = 'The computer wins the game! Press the play again button to play again.';
     }
     else
     {
-        document.getElementById('runningScoreText').innerHTML = 'Your wins: ' + playerWins + 'Computer Wins: ' + computerWins;
+        document.getElementById('runningScoreText').innerHTML = `Your wins: ${playerWins} Computer wins: ${computerWins}`
 
     }
 }
@@ -107,4 +108,12 @@ scissorsbtn.addEventListener( 'click', () => {
     playerSelection = 'scissors';
     computerSelection = computerPlay();
     document.getElementById('headingText').innerHTML = playRound(playerSelection, computerSelection)
+});
+
+const playagainbtn = document.getElementsByClassName('playagain')[0];
+playagainbtn.addEventListener( 'click', () => {
+    playerWins = 0;
+    computerWins = 0;
+    document.getElementById('headingText').innerHTML = '';
+    document.getElementById('runningScoreText').innerHTML = 'Your wins: ' + playerWins + 'Computer Wins: ' + computerWins;
 });
