@@ -8,17 +8,24 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
-
+/*
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+}
+*/
 #welcome {
     position: fixed;
-    top: 40%;
-    left: 30%;
+    top: 38%;
+    left: 25%;
+    text-align: center;
 }
 
 #firstToFiveMessage {
     position: fixed;
     top: 45%;
-    left: 43%;
+    left: 40%;
 }
 
 #buttonContainer {
