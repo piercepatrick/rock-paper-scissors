@@ -1,3 +1,32 @@
+@font-face { font-family: Mario; src: url('SuperMarioBros-ov7d.ttf'); } 
+
+body {
+    font-family: Mario;
+    background: url('pixel-art-game-background-grass-sky-clouds_210544-60.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#welcome {
+    position: fixed;
+    top: 40%;
+    left: 30%;
+}
+
+#firstToFiveMessage {
+    position: fixed;
+    top: 45%;
+    left: 43%;
+}
+
+#buttonContainer {
+    position: fixed;
+    left: 43%;
+    top: 60%;
+}
+
 .rock {
 
 }
@@ -11,5 +40,5 @@
 }
 
 .playagain {
-    
+
 }
