@@ -8,39 +8,52 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
-/*
-#wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    width: 960px;
-}
-*/
+
 #welcome {
+    font-size: 2vw;
     position: fixed;
-    top: 38%;
+    top: 20%;
     left: 25%;
     text-align: center;
+
 }
 
 #firstToFiveMessage {
-    position: fixed;
-    top: 45%;
-    left: 40%;
+    font-size: 1vw;
+    position: relative;
 }
 
 #buttonContainer {
     background-color: rgb(69, 219, 106);
-    padding: 50px;
+    padding: 5vw;
     border-radius: 10%;
     position: fixed;
-    left: 25%;
-    top: 60%;
+    left: 22%;
+    top: 45%; 
+    height: 5vw;
+    width: 10vw;
 }
 
 #playerTitle {
+    font-size: 2vw;
+    position: relative;
+    bottom: 170%;
+    left: 30%;
+}
+
+#computerContainer {
+    background-color: rgb(69, 219, 106);
+    padding: 50px;
+    border-radius: 10%;
+    position: fixed;
+    left: 55%;
+    top: 60%;
+}
+
+#computerTitle {
     position: relative;
     bottom: 110px;
-    left: 100px;
+    left: 6px;
 }
 
 .rock {
@@ -56,5 +69,12 @@ body {
 }
 
 .playagain {
+    position: fixed;
+    left: 45%;
+    top: 77%;
+}
+
+#runningScoreText {
+    position: fixed;
 
 }
