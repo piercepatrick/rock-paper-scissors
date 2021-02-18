@@ -29,9 +29,18 @@ body {
 }
 
 #buttonContainer {
+    background-color: rgb(69, 219, 106);
+    padding: 50px;
+    border-radius: 10%;
     position: fixed;
-    left: 43%;
+    left: 25%;
     top: 60%;
+}
+
+#playerTitle {
+    position: relative;
+    bottom: 110px;
+    left: 100px;
 }
 
 .rock {
