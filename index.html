@@ -6,19 +6,19 @@
     <link rel='stylesheet' href='style.css'>
 </head>
 <body>
-    <div id='wrapper'>
-        <div>
-            <h1 id='welcome'>Welcome to the rock, paper, scissors game<br><small id='firstToFiveMessage'>The Winner is First to 5 Points</small></h1>
-        </div>
-
+    <div id='titleContainer'>
+        <h1 id='welcome'>Welcome to the rock, paper, scissors game</h1>
+        <p id='firstToFiveMessage'>The Winner is First to 5 Points</p>
+    </div>
+    <div class='game-wrapper'>
         <div id='buttonContainer'>
             <h1 id='playerTitle'>You</h1>
             <div class='rock'>
-                <button type='button'>
+                <button type='button' id='rockButton'>
                     <img src='202-2025619_rock-paper-scissors-png-transparent-png.png' id='rockimage'>
                 </button>
-                <h3>Rock</h3>
             </div>
+            <h3 id='playerRockTitle'>Rock</h3>
             <button type='button' class='paper'>Paper</button>
             <button type='button' class='scissors'>Scissors</button>
         </div>

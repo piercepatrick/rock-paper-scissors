@@ -3,28 +3,35 @@
 body {
     font-family: Mario;
     background: url('pixel-art-game-background-grass-sky-clouds_210544-60.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
+    font-size: 16px;
+    color: rgb(30, 255, 0);
+}
+
+#titleContainer {
+    position: fixed;
+    margin: 0 auto;
+    width: 50%;
+    left: 25%;
+    background-color: rgba(0, 0, 0,.6);
+    padding: 30px;
+    border-radius: 30%;
 }
 
 #welcome {
-    font-size: 2vw;
-    position: fixed;
-    top: 20%;
-    left: 25%;
+    font-size: 2em;
+    margin: 15px;
     text-align: center;
 
 }
 
 #firstToFiveMessage {
-    font-size: 1vw;
-    position: relative;
+    text-align: center;
+    font-size: 2em; 
 }
 
 #buttonContainer {
-    background-color: rgb(69, 219, 106);
+    background-color:black;
     padding: 5vw;
     border-radius: 10%;
     position: fixed;
@@ -42,7 +49,7 @@ body {
 }
 
 #computerContainer {
-    background-color: rgb(69, 219, 106);
+    background-color: black;
     padding: 50px;
     border-radius: 10%;
     position: fixed;
@@ -56,9 +63,27 @@ body {
     left: 6px;
 }
 
+
+.rock{
+    position: relative;
+    bottom: 30px;
+    right: 70px;
+    border-radius: 100px;
+}
+
+#rockButton {
+    border-radius: 10px;
+}
+
 #rockimage {
-    height: 100px;
-    width: 100px;
+    height: 75px;
+    width: 75px;
+    
+}
+
+#playerRockTitle {
+    position: relative;
+
 }
 .paper {
 
@@ -76,5 +101,12 @@ body {
 
 #runningScoreText {
     position: fixed;
+    top: 40%;
+    left: 50%;
+}
 
+#headingText {
+    position: fixed;
+    top: 50%;
+    lefT: 50%;
 }
