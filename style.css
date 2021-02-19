@@ -10,7 +10,6 @@ body {
 
 #titleContainer {
     position: fixed;
-    margin: 0 auto;
     width: 50%;
     left: 25%;
     background-color: rgba(0, 0, 0,.6);
@@ -30,44 +29,22 @@ body {
     font-size: 2em; 
 }
 
-#buttonContainer {
-    background-color:black;
-    padding: 5vw;
-    border-radius: 10%;
-    position: fixed;
-    left: 22%;
-    top: 45%; 
-    height: 5vw;
-    width: 10vw;
-}
-
-#playerTitle {
-    font-size: 2vw;
+#chooseTitle {
+    font-size: 1vw;
     position: relative;
     bottom: 170%;
     left: 30%;
 }
 
-#computerContainer {
-    background-color: black;
-    padding: 50px;
-    border-radius: 10%;
-    position: fixed;
-    left: 55%;
-    top: 60%;
+#buttonContainer {
+    display: grid;
+    min-width: 300px;
 }
-
-#computerTitle {
-    position: relative;
-    bottom: 110px;
-    left: 6px;
-}
-
 
 .rock{
-    position: relative;
-    bottom: 30px;
-    right: 70px;
+    position: fixed;
+    top: 35%;
+    left: 30%;
     border-radius: 100px;
 }
 
@@ -76,21 +53,43 @@ body {
 }
 
 #rockimage {
-    height: 75px;
-    width: 75px;
+    height: 200px;
+    width: 200px;
     
 }
 
-#playerRockTitle {
-    position: relative;
-
+.paper{
+    position: fixed;
+    top: 35%;
+    left: 45%;
+    border-radius: 100px;
 }
-.paper {
 
+#paperButton {
+    border-radius: 10px;
 }
 
-.scissors {
+#paperimage {
+    height: 200px;
+    width: 200px;
+    
+}
 
+.scissors{
+    position: fixed;
+    top: 35%;
+    left: 60%;
+    border-radius: 100px;
+}
+
+#scissorsButton {
+    border-radius: 10px;
+}
+
+#scissorsimage {
+    height: 200px;
+    width: 200px;
+    
 }
 
 .playagain {
