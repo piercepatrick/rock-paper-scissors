@@ -9,68 +9,61 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection)
 {
-    if (playerWins >= 5 || computerWins >= 5) return '';
+    if (playerWins >= 5)
+    {
+        return 'Press replay!';
+    }
+    if (computerWins >= 5)
+    {
+        return 'Press replay!';
+    }
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
     if (playerSelection == computerSelection) return 'Tie!';
     if (playerSelection == 'rock' && computerSelection == 'paper') {
         computerWins++;
-        displayRunningScore(playerWins, computerWins)
+        displayRunningScore(playerWins, computerWins);
         return 'You Lose! Paper beats Rock';
     }
     if (playerSelection == 'rock' && computerSelection == 'scissors') {
         playerWins++;
-        displayRunningScore(playerWins, computerWins)
+        displayRunningScore(playerWins, computerWins);
         return 'You Win! Rock beats Scissors!';
     }
     if (playerSelection == 'paper' && computerSelection == 'scissors') {
         computerWins++;
-        displayRunningScore(playerWins, computerWins)
+        displayRunningScore(playerWins, computerWins);
         return 'You Lose! Scissors beats Paper';
     }
     if (playerSelection == 'paper' && computerSelection == 'rock') {
         playerWins++;
-        displayRunningScore(playerWins, computerWins)
+        displayRunningScore(playerWins, computerWins);
         return 'You Win! Paper beats Rock';
     }
     if (playerSelection == 'scissors' && computerSelection == 'paper') {
         playerWins++;
-        displayRunningScore(playerWins, computerWins)
+        displayRunningScore(playerWins, computerWins);
         return 'You Win! Scissors beats Paper';
     }
     if (playerSelection == 'scissors' && computerSelection == 'rock') {
         computerWins++;
-        displayRunningScore(playerWins, computerWins)
+        displayRunningScore(playerWins, computerWins);
         return 'You Lose! Rock beats Scissors';
-    }
-}
-
-function game()
-{
-    for (i=0;i<5;i++)
-    {
-        //let playerSelection = window.prompt('Rock, Paper, or Scissors?');
-        computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
-        if (playerWins > computerWins) console.log('You win the game!');
-        else if (computerWins > playerWins) console.log('You lose the game!');
-        else console.log('Your game ended with tie!');
     }
 }
 
 function displayRunningScore(playerWins, computerWins) {
     if (playerWins >= 5)
     {
-    document.getElementById('runningScoreText').innerHTML = 'You win the game! Press the play again button to play again.';
+        document.getElementById('runningScoreText').innerHTML = 'You win the game! Press the replay button to play again.';
     }
-    if (computerWins >= 5)
+    else if (computerWins >= 5)
     {
-    document.getElementById('runningScoreText').innerHTML = 'The computer wins the game! Press the play again button to play again.';
+        document.getElementById('runningScoreText').innerHTML = 'The computer wins the game! Press the replay button to play again.';
     }
     else
     {
         document.getElementById('runningScoreText').innerHTML = `Your wins: ${playerWins} Computer wins: ${computerWins}`
-
     }
 }
 
@@ -115,5 +108,5 @@ playagainbtn.addEventListener( 'click', () => {
     playerWins = 0;
     computerWins = 0;
     document.getElementById('headingText').innerHTML = '';
-    document.getElementById('runningScoreText').innerHTML = 'Your wins: ' + playerWins + 'Computer Wins: ' + computerWins;
+    document.getElementById('runningScoreText').innerHTML = '';
 });

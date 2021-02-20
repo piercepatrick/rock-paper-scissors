@@ -16,17 +16,17 @@
         <div class='buttonContainer'>
             <div class='rock'>
                 <button type='button' id='rockButton'>
-                    <img src='st,small,507x507-pad,600x600,f8f8f8 (1).jpg' id='rockimage'>
+                    <img src='images/st,small,507x507-pad,600x600,f8f8f8 (1).jpg' id='rockimage'>
                 </button>
             </div>
             <div class='paper'>
                 <button type='button' id='paperButton'>
-                    <img id='paperimage' src='st,small,507x507-pad,600x600,f8f8f8 (2).jpg'>
+                    <img id='paperimage' src='images/st,small,507x507-pad,600x600,f8f8f8 (2).jpg'>
                 </button>
             </div>
             <div class='scissors'>
                 <button type='button' id='scissorsButton'>
-                    <img id='scissorsimage' src='st,small,507x507-pad,600x600,f8f8f8.jpg'>
+                    <img id='scissorsimage' src='images/st,small,507x507-pad,600x600,f8f8f8.jpg'>
                 </button>
             </div>
         </div>
@@ -40,7 +40,7 @@
             </div>
             <div id='replay'>
                 <button type='button' class='playagain'>
-                    <img src='unnamed.png' id='replayImage'>
+                    <img src='images/unnamed.png' id='replayImage'>
                 </button>
             </div>
         </div>
@@ -50,64 +50,3 @@
     </script>
 </body>
 </html>
-
-
-
-<!---
-
-<script>
-    let playerWins = 0;
-    let computerWins = 0;
-    function computerPlay() {
-        let num = Math.floor(Math.random() * 3); 
-        if (num == 0) return 'Rock';
-        if (num == 1) return 'Paper';
-        if (num == 2) return 'Scissors';
-    }
-
-    function playRound(playerSelection, computerSelection)
-    {
-        playerSelection = playerSelection.toLowerCase();
-        computerSelection = computerSelection.toLowerCase();
-        if (playerSelection == computerSelection) return 'Tie!';
-        if (playerSelection == 'rock' && computerSelection == 'paper') {
-            computerWins++;
-            return 'You Lose! Paper beats Rock';
-        }
-        if (playerSelection == 'rock' && computerSelection == 'scissors') {
-            playerWins++;
-            return 'You Win! Rock beats Scissors!';
-        }
-        if (playerSelection == 'paper' && computerSelection == 'scissors') {
-            computerWins++;
-            return 'You Lose! Scissors beats Paper';
-        }
-        if (playerSelection == 'paper' && computerSelection == 'rock') {
-            playerWins++;
-            return 'You Win! Paper beats Rock';
-        }
-        if (playerSelection == 'scissors' && computerSelection == 'paper') {
-            playerWins++;
-            return 'You Win! Scissors beats Paper';
-        }
-        if (playerSelection == 'scissors' && computerSelection == 'rock') {
-            computerWins++;
-            return 'You Lose! Rock beats Scissors';
-        }
-    }
-
-    function game()
-    {
-        for (i = 0; i < 5; i++)
-        {
-            let playerSelection = window.prompt('Rock, Paper, or Scissors?');
-            computerSelection = computerPlay();
-            console.log(playRound(playerSelection, computerSelection));
-        }
-        if (playerWins > computerWins) console.log('You win the game!');
-        else if (computerWins > playerWins) console.log('You lose the game!');
-        else console.log('Your game ended with tie!')
-    }
-    game()
-</script>
--->
