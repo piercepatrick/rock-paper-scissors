@@ -1,7 +1,6 @@
 @font-face { font-family: Mario; src: url('SuperMarioBros-ov7d.ttf'); } 
 
 html, body {
-    max-width: 100%;
     overflow-x: hidden;
 }
 
@@ -50,23 +49,6 @@ body {
     margin-top: 30px;
 }
 
-@media screen and (max-width: 500px) {
-    .buttonContainer {
-      margin-top: 0px;
-      gap: 0px;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    #titleContainer {
-        font-size: .5em;
-        padding: 5px;
-    }
-}
-
-.rock{
-}
-
 #rockButton {
 
     border-radius: 10px;
@@ -77,12 +59,20 @@ body {
     width: 130px;
 }
 
+#rockButton:hover {
+    transform: scale(1.2);
+}
+
 .paper{
 
 }
 
 #paperButton {
     border-radius: 10px;
+}
+
+#paperButton:hover {
+    transform: scale(1.2);
 }
 
 #paperimage {
@@ -98,19 +88,24 @@ body {
     border-radius: 10px;
 }
 
+#scissorsButton:hover {
+    transform: scale(1.2);
+}
+
 #scissorsimage {
     height: 150px;
     width: 130px;
 }
 
 .bottomScoreText {
+    background: pink;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
 .playagain {
+    background: black;
     border-radius: 10%;
 }
 
@@ -126,3 +121,16 @@ body {
     font-size: 1.5em;
 }
 
+@media screen and (max-width: 500px) {
+    .buttonContainer {
+      margin-top: 0px;
+      gap: 0px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #titleContainer {
+        font-size: .5em;
+        padding: 5px;
+    }
+}
