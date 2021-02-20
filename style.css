@@ -98,7 +98,6 @@ body {
 }
 
 .bottomScoreText {
-    background: pink;
     display: flex;
     flex-direction: column;
     align-items: center;
