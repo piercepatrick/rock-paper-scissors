@@ -36,16 +36,20 @@ body {
     left: 30%;
 }
 
-#buttonContainer {
-    display: grid;
-    min-width: 300px;
+.buttonContainer {
+    display: flex;
+    t
+    flex-direction: row;
+}
+
+@media (max-width: 800px) {
+    .buttonContainer {
+      flex-direction: column;
+    }
 }
 
 .rock{
-    position: fixed;
-    top: 35%;
-    left: 30%;
-    border-radius: 100px;
+
 }
 
 #rockButton {
@@ -59,10 +63,7 @@ body {
 }
 
 .paper{
-    position: fixed;
-    top: 35%;
-    left: 45%;
-    border-radius: 100px;
+
 }
 
 #paperButton {
@@ -76,10 +77,7 @@ body {
 }
 
 .scissors{
-    position: fixed;
-    top: 35%;
-    left: 60%;
-    border-radius: 100px;
+
 }
 
 #scissorsButton {
@@ -109,3 +107,4 @@ body {
     top: 50%;
     lefT: 50%;
 }
+
